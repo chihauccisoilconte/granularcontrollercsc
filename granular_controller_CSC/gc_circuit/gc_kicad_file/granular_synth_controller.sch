@@ -1,0 +1,276 @@
+EESchema Schematic File Version 4
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:R_POT RV1
+U 1 1 607455F6
+P 6400 3300
+F 0 "RV1" H 6330 3254 50  0000 R CNN
+F 1 "R_POT" H 6330 3345 50  0000 R CNN
+F 2 "Connector:FanPinHeader_1x03_P2.54mm_Vertical" H 6400 3300 50  0001 C CNN
+F 3 "~" H 6400 3300 50  0001 C CNN
+	1    6400 3300
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_POT RV2
+U 1 1 607456B6
+P 6400 3850
+F 0 "RV2" H 6330 3804 50  0000 R CNN
+F 1 "R_POT" H 6330 3895 50  0000 R CNN
+F 2 "Connector:FanPinHeader_1x03_P2.54mm_Vertical" H 6400 3850 50  0001 C CNN
+F 3 "~" H 6400 3850 50  0001 C CNN
+	1    6400 3850
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_POT RV3
+U 1 1 6074571D
+P 6750 3600
+F 0 "RV3" H 6680 3554 50  0000 R CNN
+F 1 "R_POT" H 6680 3645 50  0000 R CNN
+F 2 "Connector:FanPinHeader_1x03_P2.54mm_Vertical" H 6750 3600 50  0001 C CNN
+F 3 "~" H 6750 3600 50  0001 C CNN
+	1    6750 3600
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_POT RV4
+U 1 1 60745767
+P 6750 4200
+F 0 "RV4" H 6680 4154 50  0000 R CNN
+F 1 "R_POT" H 6680 4245 50  0000 R CNN
+F 2 "Connector:FanPinHeader_1x03_P2.54mm_Vertical" H 6750 4200 50  0001 C CNN
+F 3 "~" H 6750 4200 50  0001 C CNN
+	1    6750 4200
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6150 3300 6250 3300
+Wire Wire Line
+	6600 3600 6200 3600
+Wire Wire Line
+	6150 3850 6250 3850
+Wire Wire Line
+	6050 4200 6600 4200
+Wire Wire Line
+	6750 3000 6750 3450
+Wire Wire Line
+	6400 3150 6400 3000
+Connection ~ 6400 3000
+Wire Wire Line
+	6400 3000 6750 3000
+Wire Wire Line
+	6750 4050 7200 4050
+Connection ~ 6750 3000
+Wire Wire Line
+	6400 3700 6400 3650
+Wire Wire Line
+	6750 4400 6750 4350
+$Comp
+L Device:LED_Dual_AAC D1
+U 1 1 6077DB10
+P 3650 3600
+F 0 "D1" H 3650 4025 50  0000 C CNN
+F 1 "neopixel_stripe" H 3650 3934 50  0000 C CNN
+F 2 "Connector:FanPinHeader_1x03_P2.54mm_Vertical" H 3650 3600 50  0001 C CNN
+F 3 "~" H 3650 3600 50  0001 C CNN
+	1    3650 3600
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4300 3750 3950 3750
+Wire Wire Line
+	3750 3300 3750 2450
+$Comp
+L Switch:SW_DIP_x01 SW1
+U 1 1 6079DD04
+P 3400 4550
+F 0 "SW1" H 3400 4817 50  0000 C CNN
+F 1 "SW_DIP_x01" H 3400 4726 50  0000 C CNN
+F 2 "Buzzer_Beeper:MagneticBuzzer_CUI_CST-931RP-A" H 3400 4550 50  0001 C CNN
+F 3 "" H 3400 4550 50  0001 C CNN
+	1    3400 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 6079F468
+P 3800 4150
+F 0 "R1" V 3593 4150 50  0000 C CNN
+F 1 "10k" V 3684 4150 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P12.70mm_Horizontal" V 3730 4150 50  0001 C CNN
+F 3 "~" H 3800 4150 50  0001 C CNN
+	1    3800 4150
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3650 3900 3650 4150
+Wire Wire Line
+	3950 3750 3950 4150
+Wire Wire Line
+	3700 4550 4000 4550
+Wire Wire Line
+	4100 3850 4100 4550
+Wire Wire Line
+	4000 4550 4000 4750
+Wire Wire Line
+	4000 4750 4650 4750
+Connection ~ 4000 4550
+Wire Wire Line
+	4000 4550 4100 4550
+$Comp
+L Device:R R2
+U 1 1 607BB259
+P 4800 4750
+F 0 "R2" V 4593 4750 50  0000 C CNN
+F 1 "10k" V 4684 4750 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P12.70mm_Horizontal" V 4730 4750 50  0001 C CNN
+F 3 "~" H 4800 4750 50  0001 C CNN
+	1    4800 4750
+	0    1    1    0   
+$EndComp
+$Comp
+L MCU_Module:Arduino_Nano_v3.x A1
+U 1 1 6091C549
+P 5200 3250
+F 0 "A1" H 5200 2164 50  0000 C CNN
+F 1 "Arduino_Nano_v3.x" H 5200 2073 50  0000 C CNN
+F 2 "Module:Arduino_Nano" H 5350 2300 50  0001 L CNN
+F 3 "http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf" H 5200 2250 50  0001 C CNN
+	1    5200 3250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3100 1800 3100 4550
+Wire Wire Line
+	5700 3250 6150 3250
+Wire Wire Line
+	6150 3250 6150 3300
+Wire Wire Line
+	5700 3350 6200 3350
+Wire Wire Line
+	6200 3350 6200 3600
+Wire Wire Line
+	5700 3450 6150 3450
+Wire Wire Line
+	6150 3450 6150 3850
+Wire Wire Line
+	5700 3550 6050 3550
+Wire Wire Line
+	6050 3550 6050 4200
+Wire Wire Line
+	5400 2250 5400 2150
+Wire Wire Line
+	5400 2150 5550 2150
+Wire Wire Line
+	5800 2150 5800 3000
+Wire Wire Line
+	5800 3000 6100 3000
+Wire Wire Line
+	4650 2450 4650 2000
+Wire Wire Line
+	4650 2000 5550 2000
+Wire Wire Line
+	5550 2000 5550 2150
+Wire Wire Line
+	3750 2450 4650 2450
+Connection ~ 5550 2150
+Wire Wire Line
+	5550 2150 5800 2150
+Wire Wire Line
+	4300 3750 4300 2950
+Wire Wire Line
+	4300 2950 4700 2950
+Wire Wire Line
+	4450 3850 4450 2850
+Wire Wire Line
+	4450 2850 4700 2850
+Wire Wire Line
+	4100 3850 4450 3850
+Wire Wire Line
+	6750 3000 7200 3000
+Wire Wire Line
+	7200 3000 7200 4050
+Wire Wire Line
+	5200 4250 5200 4550
+Wire Wire Line
+	5200 4750 4950 4750
+Wire Wire Line
+	7350 4750 7350 4600
+Wire Wire Line
+	6750 4400 7350 4400
+Connection ~ 5200 4750
+Wire Wire Line
+	7550 3750 7550 4600
+Wire Wire Line
+	7550 4600 7350 4600
+Wire Wire Line
+	6750 3750 7550 3750
+Connection ~ 7350 4600
+Wire Wire Line
+	7350 4600 7350 4400
+Wire Wire Line
+	6400 3650 6100 3650
+Wire Wire Line
+	6100 3650 6100 3000
+Connection ~ 6100 3000
+Wire Wire Line
+	6100 3000 6400 3000
+Wire Wire Line
+	6400 4000 6400 4750
+Wire Wire Line
+	5200 4750 6400 4750
+Connection ~ 6400 4750
+Wire Wire Line
+	6400 3450 6600 3450
+Wire Wire Line
+	6600 3450 6600 3300
+Wire Wire Line
+	6600 3300 7550 3300
+Wire Wire Line
+	7550 3300 7550 3750
+Connection ~ 7550 3750
+Wire Wire Line
+	3100 1800 3950 1800
+Wire Wire Line
+	3950 1800 3950 1600
+Wire Wire Line
+	3950 1600 5550 1600
+Wire Wire Line
+	5550 1600 5550 2000
+Connection ~ 5550 2000
+Wire Wire Line
+	3550 3300 3550 3100
+Wire Wire Line
+	3550 3100 4050 3100
+Wire Wire Line
+	4050 3100 4050 3400
+Wire Wire Line
+	4050 3400 4200 3400
+Wire Wire Line
+	4200 3400 4200 4400
+Wire Wire Line
+	4200 4400 5000 4400
+Wire Wire Line
+	5000 4400 5000 4550
+Wire Wire Line
+	5000 4550 5200 4550
+Connection ~ 5200 4550
+Wire Wire Line
+	5200 4550 5200 4750
+Wire Wire Line
+	6400 4750 7350 4750
+$EndSCHEMATC
